@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "ee2459e2-ce4b-43b1-bed6-3445645a7836",
+		"name": "prueba_peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/peliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/peliculas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n       \r\n        \"nombre\": \"El Rey Leon\",\r\n        \"duracion\": 130,\r\n        \"estado\": \"A\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/peliculas/9",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Nuevo nombre de la película\",\r\n  \"duracion\": 120,\r\n  \"estado\": \"A\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/peliculas/10",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Nuevo nombre de la película\",\r\n  \"duracion\": 120,\r\n  \"estado\": \"A\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/peliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/publicacion?fechaPublicacion=2023-06-01 00:00:00.000000\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"publicacion"
+					],
+					"query": [
+						{
+							"key": "fechaPublicacion",
+							"value": "2023-06-01 00:00:00.000000\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/peliculas/publicacion?fechaPublicacion=2023-06-01 00:00:00.000000\n",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/buscar?nombrePelicula=Todos Los Perros Van al Cielo&idSalaCine=3\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "nombrePelicula",
+							"value": "Todos Los Perros Van al Cielo"
+						},
+						{
+							"key": "idSalaCine",
+							"value": "3\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/peliculas/buscar?nombrePelicula=Pelicula 2&idSalaCine=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/estado-sala?nombreSala=Sala 2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"estado-sala"
+					],
+					"query": [
+						{
+							"key": "nombreSala",
+							"value": "Sala 2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
