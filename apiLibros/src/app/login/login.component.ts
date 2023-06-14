@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {LoginServicesService} from '../servicios/login-services.service'
 
 
 @Component({
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
 
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private loginServicesService:LoginServicesService ) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
     if (this.username === 'admin' && this.password== 'prueba') {
       // Aquí puedes redirigir a la siguiente pantalla o realizar otras acciones
       console.log('Inicio de sesión exitoso');
+      this.loginServicesService.login();
       this.router.navigate(['/autores']);
     } else {
       console.log('Usuario o contraseña inválidos');
